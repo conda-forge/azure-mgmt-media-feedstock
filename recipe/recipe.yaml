@@ -2,15 +2,15 @@ schema_version: 1
 
 context:
   name: azure-mgmt-media
-  version: 10.2.0
+  version: "10.2.1"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/azure-mgmt-media-${{ version }}.zip
-  sha256: 4d5abfe9d1edb43188505ce7f0a4d57834f0701326a61cf7cebb062bbbb1e1a5
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: d654dce92a85c3aeb251a7e0d0c8d8fa377d26ae4d38836ef69b85c9b4869113
 
 build:
   number: 0
